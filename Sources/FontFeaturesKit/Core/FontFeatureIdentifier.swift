@@ -8,6 +8,7 @@ public protocol FontFeatureIdentifier: CustomStringConvertible {
 	var typeIdentifier: Any { get }
 	var selectorKey: UIFontDescriptor.FeatureKey { get }
 	var selectorIdentifier: Int { get }
+    var attributeValue: [UIFontDescriptor.FeatureKey: Any] { get }
 }
 
 extension FontFeatureIdentifier {
