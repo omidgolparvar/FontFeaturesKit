@@ -46,10 +46,6 @@ public extension UIFont {
         font(byAdding: features)
     }
     
-    func featured(withStandardFeatures features: StandardFontFeatureIdentifier...) -> UIFont {
-        font(byAdding: features)
-    }
-    
     func featured(withStandardFeature feature: StandardFontFeatureIdentifier) -> UIFont {
         font(byAdding: [feature])
     }
@@ -57,10 +53,6 @@ public extension UIFont {
     // MARK: - Using OpenType Features
     
     func featured(withOpenTypeFeatures features: [OpenTypeFontFeatureIdentifier]) -> UIFont {
-        font(byAdding: features)
-    }
-    
-    func featured(withOpenTypeFeatures features: OpenTypeFontFeatureIdentifier...) -> UIFont {
         font(byAdding: features)
     }
     
@@ -73,10 +65,6 @@ public extension UIFont {
     }
     
     func featured(withOpenTypeFeatures openTypeFeatureTags: [String]) -> UIFont {
-        font(byAdding: openTypeFeatureTags.map { .openType(tag: $0) })
-    }
-    
-    func featured(withOpenTypeFeatures openTypeFeatureTags: String...) -> UIFont {
         font(byAdding: openTypeFeatureTags.map { .openType(tag: $0) })
     }
     
