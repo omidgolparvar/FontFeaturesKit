@@ -1,5 +1,5 @@
 //
-//  FontFeatureIdentifier+Standard.swift
+//  FontFeatureDescriptor+Standard.swift
 //
 //
 //  Created by Omid Golparvar on 9/8/23.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     static func standard(_ type: StandardFontFeatureTypeIdentifier, selector: FontFeatureSelectorIdentifier) -> Self {
         .init(type: type, selector: selector)
     }
@@ -17,12 +17,12 @@ public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifi
         .init(type: type, selector: selector)
     }
     
-    static func standard(_ identifer: StandardFontFeatureIdentifier) -> Self {
+    static func standard(_ identifer: StandardFontFeatureDescriptor) -> Self {
         identifer
     }
 }
 
-public struct StandardFontFeatureIdentifier: FontFeatureIdentifier {
+public struct StandardFontFeatureDescriptor: FontFeatureDescriptor {
     
     static var typeKey: UIFontDescriptor.FeatureKey {
         if #available(iOS 15, *) {

@@ -21,7 +21,7 @@ public struct DiacriticsFontFeatureSelectors: FontFeatureSelectorIdentifier {
     public static var decomposeDiacritics: Self { .init(identifier: kDecomposeDiacriticsSelector) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     static func diacritics(_ selector: DiacriticsFontFeatureSelectors) -> Self {
         .init(type: .diacritics, selector: selector)
     }

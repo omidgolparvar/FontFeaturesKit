@@ -63,7 +63,7 @@ public struct LigaturesFontFeatureSelectors: FontFeatureSelectorIdentifier {
     public static var historicalLigatures: Self { historicalLigatures(isOn: true) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     static func ligatures(_ selector: LigaturesFontFeatureSelectors) -> Self {
         .init(type: .ligatures, selector: selector)
     }

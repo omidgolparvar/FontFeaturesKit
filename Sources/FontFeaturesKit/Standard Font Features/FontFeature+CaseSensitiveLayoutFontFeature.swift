@@ -27,7 +27,7 @@ public struct CaseSensitiveLayoutFontFeatureSelectors: FontFeatureSelectorIdenti
     public static var caseSensitiveSpacing: Self { caseSensitiveSpacing(isOn: true) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     static func caseSensitiveLayout(_ selector: CaseSensitiveLayoutFontFeatureSelectors) -> Self {
         .init(type: .caseSensitiveLayout, selector: selector)
     }

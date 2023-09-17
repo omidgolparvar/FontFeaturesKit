@@ -23,7 +23,7 @@ public struct DesignComplexityFontFeatureSelectors: FontFeatureSelectorIdentifie
     public static var designLevel5: Self { .init(identifier: kDesignLevel5Selector) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     static func designComplexity(_ selector: DesignComplexityFontFeatureSelectors) -> Self {
         .init(type: .designComplexity, selector: selector)
     }

@@ -21,7 +21,7 @@ public struct FractionsFontFeatureSelectors: FontFeatureSelectorIdentifier {
     public static var diagonalFractions: Self { .init(identifier: kDiagonalFractionsSelector) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     static func fractions(_ selector: FractionsFontFeatureSelectors) -> Self {
         .init(type: .fractions, selector: selector)
     }

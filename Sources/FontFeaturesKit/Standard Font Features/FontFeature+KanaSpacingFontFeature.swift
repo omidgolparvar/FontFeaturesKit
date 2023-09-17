@@ -20,7 +20,7 @@ public struct KanaSpacingFontFeatureSelectors: FontFeatureSelectorIdentifier {
     public static var proportionalKana: Self { .init(identifier: kProportionalKanaSelector) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     static func kanaSpacing(_ selector: KanaSpacingFontFeatureSelectors) -> Self {
         .init(type: .kanaSpacing, selector: selector)
     }

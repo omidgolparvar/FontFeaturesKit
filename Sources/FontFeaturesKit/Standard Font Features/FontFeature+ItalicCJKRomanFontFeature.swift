@@ -27,7 +27,7 @@ public struct ItalicCJKRomanFontFeatureSelectors: FontFeatureSelectorIdentifier 
     public static var cjkItalicRoman: Self { cjkItalicRoman(isOn: true) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     static func italicCJKRoman(_ selector: ItalicCJKRomanFontFeatureSelectors) -> Self {
         .init(type: .italicCJKRoman, selector: selector)
     }

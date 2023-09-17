@@ -31,7 +31,7 @@ public struct UnicodeDecompositionFontFeatureSelectors: FontFeatureSelectorIdent
     public static var transcodingComposition: Self { transcodingComposition(isOn: true) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     static func unicodeDecomposition(_ selector: UnicodeDecompositionFontFeatureSelectors) -> Self {
         .init(type: .unicodeDecomposition, selector: selector)
     }

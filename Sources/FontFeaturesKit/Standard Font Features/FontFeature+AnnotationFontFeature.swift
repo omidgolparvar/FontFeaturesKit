@@ -29,7 +29,7 @@ public struct AnnotationFontFeatureSelectors: FontFeatureSelectorIdentifier {
     public static var invertedRoundedBoxAnnotation: Self { .init(identifier: kInvertedRoundedBoxAnnotationSelector) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     static func annotation(_ selector: AnnotationFontFeatureSelectors) -> Self {
         .init(type: .annotation, selector: selector)
     }

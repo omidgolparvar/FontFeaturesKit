@@ -25,7 +25,7 @@ public struct LetterCaseFontFeatureSelectors: FontFeatureSelectorIdentifier {
     public static var initialCapsAndSmallCaps: Self { .init(identifier: kInitialCapsAndSmallCapsSelector) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     @available(*, deprecated, message: "use `lowerCase(_:)` or `upperCase(_:)` instead")
     static func letterCase(_ selector: LetterCaseFontFeatureSelectors) -> Self {
         .init(type: .letterCase, selector: selector)

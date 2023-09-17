@@ -21,7 +21,7 @@ public struct CursiveConnectionFontFeatureSelectors: FontFeatureSelectorIdentifi
     public static var cursive: Self { .init(identifier: kCursiveSelector) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     static func cursiveConnection(_ selector: CursiveConnectionFontFeatureSelectors) -> Self {
         .init(type: .cursiveConnection, selector: selector)
     }

@@ -21,7 +21,7 @@ public struct LowerCaseFontFeatureSelectors: FontFeatureSelectorIdentifier {
     public static var lowerCasePetiteCaps: Self { .init(identifier: kLowerCasePetiteCapsSelector) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     static func lowerCase(_ selector: LowerCaseFontFeatureSelectors) -> Self {
         .init(type: .lowerCase, selector: selector)
     }

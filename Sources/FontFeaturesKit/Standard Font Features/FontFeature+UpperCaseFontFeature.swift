@@ -21,7 +21,7 @@ public struct UpperCaseFontFeatureSelectors: FontFeatureSelectorIdentifier {
     public static var upperCasePetiteCaps: Self { .init(identifier: kUpperCasePetiteCapsSelector) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     static func upperCase(_ selector: UpperCaseFontFeatureSelectors) -> Self {
         .init(type: .upperCase, selector: selector)
     }

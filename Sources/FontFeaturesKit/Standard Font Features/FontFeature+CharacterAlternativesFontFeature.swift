@@ -19,7 +19,7 @@ public struct CharacterAlternativesFontFeatureSelectors: FontFeatureSelectorIden
     public static var noAlternates: Self { .init(identifier: kNoAlternatesSelector) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     static func characterAlternatives(_ selector: CharacterAlternativesFontFeatureSelectors) -> Self {
         .init(type: .characterAlternatives, selector: selector)
     }

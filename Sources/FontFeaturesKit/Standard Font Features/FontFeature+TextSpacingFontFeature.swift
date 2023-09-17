@@ -25,7 +25,7 @@ public struct TextSpacingFontFeatureSelectors: FontFeatureSelectorIdentifier {
     public static var altHalfWidthText: Self { .init(identifier: kAltHalfWidthTextSelector) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     static func textSpacing(_ selector: TextSpacingFontFeatureSelectors) -> Self {
         .init(type: .textSpacing, selector: selector)
     }

@@ -22,7 +22,7 @@ public struct CJKRomanSpacingFontFeatureSelectors: FontFeatureSelectorIdentifier
     public static var fullWidthCJKRomanSelector: Self { .init(identifier: kFullWidthCJKRomanSelector) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     static func cjkRomanSpacing(_ selector: CJKRomanSpacingFontFeatureSelectors) -> Self {
         .init(type: .cjkRomanSpacing, selector: selector)
     }

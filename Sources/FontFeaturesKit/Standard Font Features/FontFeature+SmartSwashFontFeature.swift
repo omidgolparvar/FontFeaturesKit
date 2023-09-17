@@ -39,7 +39,7 @@ public struct SmartSwashFontFeatureSelectors: FontFeatureSelectorIdentifier {
     public static var nonFinalSwashes: Self { nonFinalSwashes(isOn: true) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     static func smartSwash(_ selector: SmartSwashFontFeatureSelectors) -> Self {
         .init(type: .smartSwash, selector: selector)
     }

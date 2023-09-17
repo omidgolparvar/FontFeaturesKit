@@ -24,7 +24,7 @@ public struct IdeographicAlternativesFontFeatureSelectors: FontFeatureSelectorId
     public static var ideographicAlt5: Self { .init(identifier: kIdeographicAltFiveSelector) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     static func ideographicAlternatives(_ selector: IdeographicAlternativesFontFeatureSelectors) -> Self {
         .init(type: .ideographicAlternatives, selector: selector)
     }

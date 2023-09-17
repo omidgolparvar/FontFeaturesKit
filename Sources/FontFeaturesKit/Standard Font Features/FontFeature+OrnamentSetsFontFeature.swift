@@ -25,7 +25,7 @@ public struct OrnamentSetsFontFeatureSelectors: FontFeatureSelectorIdentifier {
     public static var mathSymbols: Self { .init(identifier: kMathSymbolsSelector) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     static func ornamentSets(_ selector: OrnamentSetsFontFeatureSelectors) -> Self {
         .init(type: .ornamentSets, selector: selector)
     }

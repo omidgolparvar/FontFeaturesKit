@@ -33,7 +33,7 @@ public struct CharacterShapeFontFeatureSelectors: FontFeatureSelectorIdentifier 
     public static var traditionalNamesCharacters: Self { .init(identifier: kTraditionalNamesCharactersSelector) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     static func characterShape(_ selector: CharacterShapeFontFeatureSelectors) -> Self {
         .init(type: .characterShape, selector: selector)
     }

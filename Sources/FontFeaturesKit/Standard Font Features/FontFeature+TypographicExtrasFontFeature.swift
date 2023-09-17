@@ -43,7 +43,7 @@ public struct TypographicExtrasFontFeatureSelectors: FontFeatureSelectorIdentifi
     public static var periodsToEllipsis: Self { periodsToEllipsis(isOn: true) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     static func typographicExtras(_ selector: TypographicExtrasFontFeatureSelectors) -> Self {
         .init(type: .typographicExtras, selector: selector)
     }

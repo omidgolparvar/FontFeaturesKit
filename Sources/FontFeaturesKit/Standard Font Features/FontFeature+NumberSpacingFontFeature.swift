@@ -22,7 +22,7 @@ public struct NumberSpacingFontFeatureSelectors: FontFeatureSelectorIdentifier {
     public static var quarterWidthNumbers: Self { .init(identifier: kQuarterWidthNumbersSelector) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     static func numberSpacing(_ selector: NumberSpacingFontFeatureSelectors) -> Self {
         .init(type: .numberSpacing, selector: selector)
     }

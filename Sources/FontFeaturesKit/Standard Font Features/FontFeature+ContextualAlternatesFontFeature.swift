@@ -31,7 +31,7 @@ public struct ContextualAlternatesFontFeatureSelectors: FontFeatureSelectorIdent
     public static var contextualSwashAlternates: Self { contextualSwashAlternates(isOn: true) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     static func contextualAlternates(_ selector: ContextualAlternatesFontFeatureSelectors) -> Self {
         .init(type: .contextualAlternates, selector: selector)
     }

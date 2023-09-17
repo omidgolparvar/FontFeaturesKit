@@ -28,7 +28,7 @@ public struct TransliterationFontFeatureSelectors: FontFeatureSelectorIdentifier
     public static var hanjaToHangulAlt3: Self { .init(identifier: kHanjaToHangulAltThreeSelector) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     static func transliteration(_ selector: TransliterationFontFeatureSelectors) -> Self {
         .init(type: .transliteration, selector: selector)
     }

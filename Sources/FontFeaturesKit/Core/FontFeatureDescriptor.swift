@@ -1,5 +1,5 @@
 //
-//  FontFeatureIdentifier.swift
+//  FontFeatureDescriptor.swift
 //
 //
 //  Created by Omid Golparvar on 9/8/23.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-public protocol FontFeatureIdentifier: CustomStringConvertible {
+public protocol FontFeatureDescriptor: CustomStringConvertible {
     var typeKey: UIFontDescriptor.FeatureKey { get }
     var typeIdentifier: Any { get }
     var selectorKey: UIFontDescriptor.FeatureKey { get }
@@ -16,7 +16,7 @@ public protocol FontFeatureIdentifier: CustomStringConvertible {
     var attributeValue: [UIFontDescriptor.FeatureKey: Any] { get }
 }
 
-extension FontFeatureIdentifier {
+extension FontFeatureDescriptor {
     
     public var attributeValue: [UIFontDescriptor.FeatureKey: Any] {
         [

@@ -24,7 +24,7 @@ public struct CJKSymbolAlternativesFontFeatureSelectors: FontFeatureSelectorIden
     public static var cjkSymbolAltFive: Self { .init(identifier: kCJKSymbolAltFiveSelector) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     static func cjkSymbolAlternatives(_ selector: CJKSymbolAlternativesFontFeatureSelectors) -> Self {
         .init(type: .cjkSymbolAlternatives, selector: selector)
     }

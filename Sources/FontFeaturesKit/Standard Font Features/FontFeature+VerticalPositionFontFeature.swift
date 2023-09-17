@@ -23,7 +23,7 @@ public struct VerticalPositionFontFeatureSelectors: FontFeatureSelectorIdentifie
     public static var scientificInferiors: Self { .init(identifier: kScientificInferiorsSelector) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     static func verticalPosition(_ selector: VerticalPositionFontFeatureSelectors) -> Self {
         .init(type: .verticalPosition, selector: selector)
     }

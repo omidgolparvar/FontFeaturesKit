@@ -27,7 +27,7 @@ public struct RubyKanaFontFeatureSelectors: FontFeatureSelectorIdentifier {
     public static var rubyKana: Self { rubyKana(isOn: true) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     static func rubyKana(_ selector: RubyKanaFontFeatureSelectors) -> Self {
         .init(type: .rubyKana, selector: selector)
     }

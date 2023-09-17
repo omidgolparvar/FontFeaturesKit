@@ -21,7 +21,7 @@ public struct IdeographicSpacingFontFeatureSelectors: FontFeatureSelectorIdentif
     public static var halfWidthIdeographs: Self { .init(identifier: kHalfWidthIdeographsSelector) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     static func ideographicSpacing(_ selector: IdeographicSpacingFontFeatureSelectors) -> Self {
         .init(type: .ideographicSpacing, selector: selector)
     }

@@ -23,8 +23,8 @@ public struct AllTypographicFontFeatureSelectors: FontFeatureSelectorIdentifier 
     public static var allTypeFeatures: Self { allTypeFeatures(isOn: true) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
-    static func allTypographic(_ selector: AllTypographicFontFeatureSelectors) -> FontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
+    static func allTypographic(_ selector: AllTypographicFontFeatureSelectors) -> FontFeatureDescriptor {
         Self.init(type: .allTypographic, selector: selector)
     }
 }

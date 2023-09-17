@@ -23,7 +23,7 @@ public struct LinguisticRearrangementFontFeatureSelectors: FontFeatureSelectorId
     public static var linguisticRearrangement: Self { linguisticRearrangement(isOn: true) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     static func linguisticRearrangement(_ selector: LinguisticRearrangementFontFeatureSelectors) -> Self {
         .init(type: .linguisticRearrangement, selector: selector)
     }

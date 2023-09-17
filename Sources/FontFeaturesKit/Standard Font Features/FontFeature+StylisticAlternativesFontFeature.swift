@@ -120,7 +120,7 @@ public struct StylisticAlternativesFontFeatureSelectors: FontFeatureSelectorIden
     public static var ss20: Self { stylisticAlt20(isOn: true) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     static func stylisticAlternatives(_ selector: StylisticAlternativesFontFeatureSelectors) -> Self {
         .init(type: .stylisticAlternatives, selector: selector)
     }

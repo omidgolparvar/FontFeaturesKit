@@ -27,7 +27,7 @@ public struct AlternateKanaFontFeatureSelectors: FontFeatureSelectorIdentifier {
     public static var alternateVertKanaOn: Self { alternateVertKanaOn(isOn: true) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     static func alternateKana(_ selector: AlternateKanaFontFeatureSelectors) -> Self {
         .init(type: .alternateKana, selector: selector)
     }

@@ -1,5 +1,5 @@
 //
-//  FontFeatureIdentifier+OpenType.swift
+//  FontFeatureDescriptor+OpenType.swift
 //
 //
 //  Created by Omid Golparvar on 9/8/23.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-public extension FontFeatureIdentifier where Self == OpenTypeFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == OpenTypeFontFeatureDescriptor {
     static func openType(_ type: OpenTypeFontFeatureTypeIdentifier, selector: FontFeatureSelectorIdentifier) -> Self {
         .init(type: type, selector: selector)
     }
@@ -21,12 +21,12 @@ public extension FontFeatureIdentifier where Self == OpenTypeFontFeatureIdentifi
         .init(type: .init(stringLiteral: tag), selector: 1)
     }
     
-    static func openType(_ identifier: OpenTypeFontFeatureIdentifier) -> Self {
+    static func openType(_ identifier: OpenTypeFontFeatureDescriptor) -> Self {
         identifier
     }
 }
 
-public struct OpenTypeFontFeatureIdentifier: FontFeatureIdentifier {
+public struct OpenTypeFontFeatureDescriptor: FontFeatureDescriptor {
     public let type: OpenTypeFontFeatureTypeIdentifier
     public let selector: FontFeatureSelectorIdentifier
     

@@ -20,7 +20,7 @@ public struct NumberCaseFontFeatureSelectors: FontFeatureSelectorIdentifier {
     public static var upperCaseNumbers: Self { .init(identifier: kUpperCaseNumbersSelector) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     static func numberCase(_ selector: NumberCaseFontFeatureSelectors) -> Self {
         .init(type: .numberCase, selector: selector)
     }

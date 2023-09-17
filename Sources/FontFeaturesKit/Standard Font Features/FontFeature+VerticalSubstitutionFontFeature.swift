@@ -23,7 +23,7 @@ public struct VerticalSubstitutionFontFeatureSelectors: FontFeatureSelectorIdent
     public static var substituteVerticalForms: Self { substituteVerticalForms(isOn: true) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     static func verticalSubstitution(_ selector: VerticalSubstitutionFontFeatureSelectors) -> Self {
         .init(type: .verticalSubstitution, selector: selector)
     }

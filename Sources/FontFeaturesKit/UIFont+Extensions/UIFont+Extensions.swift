@@ -12,12 +12,7 @@ public extension UIFont {
     
     // MARK: - Custom Initializer
     
-    convenience init(
-        name: String,
-        size: CGFloat,
-        weight: Weight,
-        features: [FontFeatureIdentifier]
-    ) {
+    convenience init(name: String, size: CGFloat, weight: Weight, features: [FontFeatureDescriptor]) {
         let descriptor = UIFontDescriptor(name: name, size: size)
             .addingAttributes([
                 .traits: [UIFontDescriptor.TraitKey.weight: weight],
@@ -29,34 +24,34 @@ public extension UIFont {
     
     // MARK: - Using FontFeatureIdentifier
     
-    private func font(byAdding features: [FontFeatureIdentifier]) -> UIFont {
+    private func font(byAdding features: [FontFeatureDescriptor]) -> UIFont {
         let newFontDescriptor = self
             .fontDescriptor
             .addingAttributes([.featureSettings: features.map(\.attributeValue)])
         return UIFont(descriptor: newFontDescriptor, size: pointSize)
     }
     
-    func featured(with features: [FontFeatureIdentifier]) -> UIFont {
+    func featured(with features: [FontFeatureDescriptor]) -> UIFont {
         font(byAdding: features)
     }
     
     // MARK: - Using Standard Features
     
-    func featured(withStandardFeatures features: [StandardFontFeatureIdentifier]) -> UIFont {
+    func featured(withStandardFeatures features: [StandardFontFeatureDescriptor]) -> UIFont {
         font(byAdding: features)
     }
     
-    func featured(withStandardFeature feature: StandardFontFeatureIdentifier) -> UIFont {
+    func featured(withStandardFeature feature: StandardFontFeatureDescriptor) -> UIFont {
         font(byAdding: [feature])
     }
     
     // MARK: - Using OpenType Features
     
-    func featured(withOpenTypeFeatures features: [OpenTypeFontFeatureIdentifier]) -> UIFont {
+    func featured(withOpenTypeFeatures features: [OpenTypeFontFeatureDescriptor]) -> UIFont {
         font(byAdding: features)
     }
     
-    func featured(withOpenTypeFeature feature: OpenTypeFontFeatureIdentifier) -> UIFont {
+    func featured(withOpenTypeFeature feature: OpenTypeFontFeatureDescriptor) -> UIFont {
         font(byAdding: [feature])
     }
     

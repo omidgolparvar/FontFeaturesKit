@@ -24,7 +24,7 @@ public struct StyleOptionsFontFeatureSelectors: FontFeatureSelectorIdentifier {
     public static var tallCaps: Self { .init(identifier: kTallCapsSelector) }
 }
 
-public extension FontFeatureIdentifier where Self == StandardFontFeatureIdentifier {
+public extension FontFeatureDescriptor where Self == StandardFontFeatureDescriptor {
     static func styleOptions(_ selector: StyleOptionsFontFeatureSelectors) -> Self {
         .init(type: .styleOptions, selector: selector)
     }
